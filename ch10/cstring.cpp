@@ -14,7 +14,7 @@ size_t _strlen(const char * str)
 char *_strcpy(char *dest, const char *src)
 {
   size_t length = _strlen(src);
-  // Èç¹ûÓĞdest£¬ÏÈÊÍ·ÅdestÄÚ´æ
+  // å¦‚æœæœ‰destï¼Œå…ˆé‡Šæ”¾destå†…å­˜
   if (dest)
   {
     delete[] dest;
@@ -157,22 +157,22 @@ private:
 int main(int argc, char const *argv[])
 {
   cstring str1;
-  cout << "²âÊÔcstring()µÄsize£º" << str1.size() << endl;
-  cout << "²âÊÔisEmpty()£º" << str1.isEmpty() << endl;
+  cout << "æµ‹è¯•cstring()çš„sizeï¼š" << str1.size() << endl;
+  cout << "æµ‹è¯•isEmpty()ï¼š" << str1.isEmpty() << endl;
   cstring str2('c');
-  cout << "²âÊÔcstring(char)µÄsize£º" << str2.size() << endl;
-  cout << "²âÊÔisEmpty()£º" << str2.isEmpty() << endl;
+  cout << "æµ‹è¯•cstring(char)çš„sizeï¼š" << str2.size() << endl;
+  cout << "æµ‹è¯•isEmpty()ï¼š" << str2.isEmpty() << endl;
   char *tmp = "c++";
   cstring str3(tmp);
-  cout << "²âÊÔcstring(const char *)µÄsize£º" << str3.size() << endl;
+  cout << "æµ‹è¯•cstring(const char *)çš„sizeï¼š" << str3.size() << endl;
   cstring str4(str3);
-  cout << "²âÊÔcstring(const cstring&)µÄsize£º" << str4.size() << endl;
+  cout << "æµ‹è¯•cstring(const cstring&)çš„sizeï¼š" << str4.size() << endl;
   cstring str5(cstring("python"));
-  cout << "²âÊÔcstring(cstring&&)µÄsize£º" << str5.size() << endl;
-  cout << "²âÊÔget_str()£º" << str5.get_str() << endl;
+  cout << "æµ‹è¯•cstring(cstring&&)çš„sizeï¼š" << str5.size() << endl;
+  cout << "æµ‹è¯•get_str()ï¼š" << str5.get_str() << endl;
   str5.empty();
-  cout << "²âÊÔempty()£¬emptyºóµÄlengthÎª£º" << str5.size() << endl;
+  cout << "æµ‹è¯•empty()ï¼Œemptyåçš„lengthä¸ºï¼š" << str5.size() << endl;
   str2.concate(str3);
-  cout << "²âÊÔcstring& concate(const cstring&)£¬Á¬½Óstr2ºÍstr3ºóµÄ×Ö·û´®Ô¤ÆÚÎªcc++£º" << str2.get_str() << endl;
+  cout << "æµ‹è¯•cstring& concate(const cstring&)ï¼Œè¿æ¥str2å’Œstr3åçš„å­—ç¬¦ä¸²é¢„æœŸä¸ºcc++ï¼š" << str2.get_str() << endl;
   return 0;
 }
